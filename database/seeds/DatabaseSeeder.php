@@ -28,6 +28,7 @@ class ArtistTableSeeder extends Seeder {
 	public function run()
 	{
 		Artist::create(['name' => 'artist1']);
+		Artist::create(['name' => 'artist2']);
 	}
 }
 
@@ -44,6 +45,10 @@ class DiscographyTableSeeder extends Seeder {
 		Discography::create([
 			'name' => 'disc2',
 			'artist_id' => '1',
+		]);
+		Discography::create([
+			'name' => 'artist2-disc1',
+			'artist_id' => '2',
 		]);
 	}
 }

@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Artist;
+use App\Models\Discography;
 
 class EloquentSampleController extends Controller {
 
@@ -13,4 +14,10 @@ class EloquentSampleController extends Controller {
 		]);
 	}
 
+	public function eager(Discography $discography)
+	{
+		return view('sample.eloquent.eager', [
+			'discography' => $discography,
+		]);
+	}
 }
