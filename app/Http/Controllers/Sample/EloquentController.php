@@ -1,9 +1,10 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Sample;
 
+use App\Http\Controllers\Controller;
 use App\Models\Artist;
 use App\Models\Discography;
 
-class EloquentSampleController extends Controller {
+class EloquentController extends Controller {
 
 	public function basic(Artist $artist)
 	{

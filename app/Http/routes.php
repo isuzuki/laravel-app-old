@@ -13,5 +13,11 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('sample/eloquent/basic', 'EloquentSampleController@basic');
-Route::get('sample/eloquent/eager', 'EloquentSampleController@eager');
+Route::group(['namespace' => 'Sample'], function()
+{
+	Route::group(['prefix' => 'sample/eloquent'], function()
+	{
+		Route::get('basic', 'EloquentController@basic');
+		Route::get('eager', 'EloquentController@eager');
+	});
+});
