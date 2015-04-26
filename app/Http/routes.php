@@ -21,3 +21,9 @@ Route::group(['namespace' => 'Sample'], function()
 		Route::get('eager', 'EloquentController@eager');
 	});
 });
+
+Route::group(['prefix' => 'image'], function()
+{
+	Route::get('upload', 'ImageController@getUpload');
+	Route::post('upload', 'ImageController@postUpload');
+});
